@@ -8,7 +8,8 @@
             "driver": "PostgreSQL",
             "name": "movie_ratings_local",
             "database": "movie_ratings",
-            "username": "postgres"
+            "username": "postgres",
+            "password": ""
         }
     ]
 }

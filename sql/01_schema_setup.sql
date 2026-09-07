@@ -4,8 +4,6 @@ CREATE TABLE movies (
     genres     VARCHAR(255) NOT NULL
 );
 
-SELECT * FROM movies LIMIT 10;
-
 CREATE TABLE ratings (
     user_id  INT NOT NULL,
     movie_id INT NOT NULL REFERENCES movies(movie_id),
@@ -14,4 +12,3 @@ CREATE TABLE ratings (
     PRIMARY KEY (user_id, movie_id)
 );
 
-SELECT * FROM ratings LIMIT 10;

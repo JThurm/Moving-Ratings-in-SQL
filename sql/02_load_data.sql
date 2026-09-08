@@ -3,6 +3,6 @@
 
 SET client_encoding = 'UTF8';
 
-\copy movies FROM 'C:\Users\judah\OneDrive\Desktop\College Stuff\projects\Moving-Ratings-in-SQL\data\ml-latest-small\movies.csv' DELIMITER ',' CSV HEADER;
+\copy movies FROM 'C:\..\..\..\..\..\projects\Moving-Ratings-in-SQL\data\ml-latest-small\movies.csv' DELIMITER ',' CSV HEADER;
 
-\copy ratings FROM 'C:\Users\judah\OneDrive\Desktop\College Stuff\projects\Moving-Ratings-in-SQL\data\ml-latest-small\ratings.csv' DELIMITER ',' CSV HEADER;
+\copy ratings FROM 'C:\..\..\..\..\..\projects\Moving-Ratings-in-SQL\data\ml-latest-small\ratings.csv' DELIMITER ',' CSV HEADER;

@@ -9,6 +9,7 @@ CREATE TABLE ratings (
     movie_id INT NOT NULL REFERENCES movies(movie_id),
     rating   DECIMAL(2, 1) NOT NULL,
     timestamp BIGINT NOT NULL,
+    ALTER TABLE ratings RENAME COLUMN timestamp TO rated_at;
     PRIMARY KEY (user_id, movie_id)
 );
 

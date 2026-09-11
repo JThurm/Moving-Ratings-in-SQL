@@ -1,0 +1,367 @@
+release_year,event_name,event_type,genre,rating_count,average_rating,rating_stddev
+1929,Great Depression,Economic,Fantasy,4,4.50,0.58
+1929,Great Depression,Economic,Documentary,3,3.33,1.53
+1929,Great Depression,Economic,Musical,2,3.25,0.35
+1929,Great Depression,Economic,Comedy,1,3.50,
+1930,Great Depression,Economic,Drama,13,4.23,0.63
+1930,Great Depression,Economic,Action,10,4.35,0.67
+1930,Great Depression,Economic,War,10,4.35,0.67
+1930,Great Depression,Economic,Comedy,4,4.13,0.25
+1930,Great Depression,Economic,Musical,4,4.13,0.25
+1930,Great Depression,Economic,Romance,1,4.00,
+1931,Great Depression,Economic,Drama,33,3.65,1.18
+1931,Great Depression,Economic,Horror,22,3.50,1.04
+1931,Great Depression,Economic,Crime,18,3.81,1.06
+1931,Great Depression,Economic,Mystery,17,3.62,1.17
+1931,Great Depression,Economic,Comedy,16,3.72,1.24
+1931,Great Depression,Economic,Film-Noir,15,3.73,1.15
+1931,Great Depression,Economic,Romance,15,3.80,1.00
+1931,Great Depression,Economic,Thriller,15,3.73,1.15
+1931,Great Depression,Economic,Sci-Fi,11,3.91,0.94
+1931,Great Depression,Economic,Action,2,4.25,0.35
+1931,Great Depression,Economic,Musical,1,1.00,
+1931,Great Depression,Economic,Western,1,3.50,
+1932,Great Depression,Economic,Drama,16,3.44,0.54
+1932,Great Depression,Economic,Crime,14,3.36,0.53
+1932,Great Depression,Economic,Horror,12,3.21,0.62
+1932,Great Depression,Economic,Romance,7,3.50,0.76
+1932,Great Depression,Economic,Comedy,4,3.00,1.73
+1932,Great Depression,Economic,Film-Noir,3,3.67,0.76
+1932,Great Depression,Economic,War,1,3.00,
+1933,Great Depression,Economic,Horror,28,3.64,0.95
+1933,Great Depression,Economic,Musical,28,3.79,1.08
+1933,Great Depression,Economic,Comedy,27,3.74,1.08
+1933,Great Depression,Economic,Adventure,26,3.65,0.98
+1933,Great Depression,Economic,Fantasy,26,3.65,0.98
+1933,Great Depression,Economic,Action,25,3.64,0.99
+1933,Great Depression,Economic,War,23,3.80,1.15
+1933,Great Depression,Economic,Drama,10,3.95,0.60
+1933,Great Depression,Economic,Romance,10,3.85,0.67
+1933,Great Depression,Economic,Sci-Fi,2,3.50,0.71
+1933,Great Depression,Economic,Children,1,4.00,
+1933,Great Depression,Economic,Crime,1,4.00,
+1933,Great Depression,Economic,Mystery,1,4.00,
+1933,Great Depression,Economic,Thriller,1,4.00,
+1934,Great Depression,Economic,Comedy,25,4.16,0.77
+1934,Great Depression,Economic,Romance,17,4.24,0.73
+1934,Great Depression,Economic,Crime,7,3.86,0.85
+1934,Great Depression,Economic,Drama,6,3.92,0.58
+1934,Great Depression,Economic,Documentary,4,4.00,0.71
+1934,Great Depression,Economic,Musical,3,4.00,1.00
+1934,Great Depression,Economic,Thriller,3,3.67,0.58
+1934,Great Depression,Economic,Children,1,5.00,
+1934,Great Depression,Economic,Fantasy,1,5.00,
+1934,Great Depression,Economic,War,1,4.50,
+1935,Great Depression,Economic,Drama,24,3.90,0.68
+1935,Great Depression,Economic,Romance,22,4.00,0.60
+1935,Great Depression,Economic,Comedy,21,4.02,0.62
+1935,Great Depression,Economic,Musical,18,4.06,0.64
+1935,Great Depression,Economic,Mystery,11,4.05,0.82
+1935,Great Depression,Economic,Thriller,11,4.05,0.82
+1935,Great Depression,Economic,Adventure,8,4.13,0.35
+1935,Great Depression,Economic,Horror,3,3.17,0.29
+1935,Great Depression,Economic,Sci-Fi,3,3.17,0.29
+1935,Great Depression,Economic,Action,2,4.00,0.00
+1935,Great Depression,Economic,Fantasy,1,3.50,
+1936,Great Depression,Economic,Romance,41,3.65,0.94
+1936,Great Depression,Economic,Comedy,38,3.64,0.97
+1936,Great Depression,Economic,Drama,34,3.68,0.93
+1936,Great Depression,Economic,Musical,5,3.80,0.27
+1936,Great Depression,Economic,Crime,4,2.25,2.02
+1936,Great Depression,Economic,Film-Noir,4,3.38,1.93
+1936,Great Depression,Economic,Thriller,4,2.50,1.35
+1936,Great Depression,Economic,Mystery,3,2.83,2.02
+1936,Great Depression,Economic,Adventure,2,1.75,1.77
+1936,Great Depression,Economic,Western,1,3.50,
+1937,Great Depression,Economic,Drama,105,3.59,0.81
+1937,Great Depression,Economic,Musical,84,3.67,0.80
+1937,Great Depression,Economic,Children,81,3.56,0.83
+1937,Great Depression,Economic,Animation,77,3.62,0.79
+1937,Great Depression,Economic,Fantasy,77,3.62,0.79
+1937,Great Depression,Economic,Comedy,9,4.39,0.65
+1937,Great Depression,Economic,Romance,9,4.06,0.98
+1937,Great Depression,Economic,War,7,3.71,1.11
+1937,Great Depression,Economic,Crime,3,3.67,1.04
+1937,Great Depression,Economic,Adventure,2,3.25,1.06
+1937,Great Depression,Economic,Action,1,2.50,
+1937,Great Depression,Economic,Film-Noir,1,4.50,
+1937,Great Depression,Economic,Thriller,1,2.50,
+1938,Great Depression,Economic,Romance,32,3.81,1.13
+1938,Great Depression,Economic,Comedy,30,3.72,1.09
+1938,Great Depression,Economic,Drama,24,3.60,1.03
+1938,Great Depression,Economic,Action,10,4.00,0.97
+1938,Great Depression,Economic,Adventure,8,4.00,0.96
+1938,Great Depression,Economic,Thriller,8,3.88,0.69
+1938,Great Depression,Economic,Mystery,6,3.92,0.80
+1938,Great Depression,Economic,Children,5,3.50,0.87
+1938,Great Depression,Economic,Fantasy,5,3.50,0.87
+1938,Great Depression,Economic,Animation,2,4.00,0.00
+1938,Great Depression,Economic,Crime,2,3.75,0.35
+1938,Great Depression,Economic,Film-Noir,2,3.75,0.35
+1938,Great Depression,Economic,War,2,4.00,1.41
+1938,Great Depression,Economic,Musical,1,3.50,
+1939,Great Depression,Economic,Adventure,100,3.82,1.05
+1939,Great Depression,Economic,Children,98,3.85,1.05
+1939,Great Depression,Economic,Musical,93,3.87,1.02
+1939,Great Depression,Economic,Fantasy,92,3.88,1.03
+1939,Great Depression,Economic,Drama,90,3.67,0.92
+1939,Great Depression,Economic,Romance,64,3.63,0.95
+1939,Great Depression,Economic,War,48,3.61,1.04
+1939,Great Depression,Economic,Comedy,21,3.67,0.68
+1939,Great Depression,Economic,Western,5,3.60,0.42
+1939,Great Depression,Economic,Animation,4,3.25,1.71
+1939,Great Depression,Economic,Action,3,3.50,0.50
+1939,Great Depression,Economic,Crime,1,3.50,
+1939,Great Depression,Economic,Mystery,1,3.50,
+1939,World War II,Historical,Adventure,100,3.82,1.05
+1939,World War II,Historical,Children,98,3.85,1.05
+1939,World War II,Historical,Musical,93,3.87,1.02
+1939,World War II,Historical,Fantasy,92,3.88,1.03
+1939,World War II,Historical,Drama,90,3.67,0.92
+1939,World War II,Historical,Romance,64,3.63,0.95
+1939,World War II,Historical,War,48,3.61,1.04
+1939,World War II,Historical,Comedy,21,3.67,0.68
+1939,World War II,Historical,Western,5,3.60,0.42
+1939,World War II,Historical,Animation,4,3.25,1.71
+1939,World War II,Historical,Action,3,3.50,0.50
+1939,World War II,Historical,Crime,1,3.50,
+1939,World War II,Historical,Mystery,1,3.50,
+1940,World War II,Historical,Fantasy,114,3.60,1.05
+1940,World War II,Historical,Musical,114,3.60,1.05
+1940,World War II,Historical,Animation,113,3.61,1.05
+1940,World War II,Historical,Children,113,3.61,1.05
+1940,World War II,Historical,Drama,85,4.13,0.76
+1940,World War II,Historical,Comedy,71,4.15,0.83
+1940,World War II,Historical,Romance,71,4.20,0.81
+1940,World War II,Historical,Thriller,20,4.08,0.78
+1940,World War II,Historical,Mystery,19,4.13,0.76
+1940,World War II,Historical,War,15,4.13,0.61
+1940,World War II,Historical,Adventure,4,3.38,0.48
+1940,World War II,Historical,Action,3,1.83,1.26
+1940,World War II,Historical,Sci-Fi,3,1.67,1.04
+1940,World War II,Historical,Film-Noir,2,3.75,0.35
+1940,World War II,Historical,Western,2,3.00,0.00
+1940,World War II,Historical,Horror,1,2.50,
+1941,World War II,Historical,Drama,125,3.83,0.94
+1941,World War II,Historical,Mystery,119,4.08,0.84
+1941,World War II,Historical,Film-Noir,52,4.15,0.63
+1941,World War II,Historical,Musical,36,3.39,0.88
+1941,World War II,Historical,Animation,35,3.39,0.89
+1941,World War II,Historical,Children,35,3.39,0.89
+1941,World War II,Historical,Comedy,28,3.75,0.88
+1941,World War II,Historical,Romance,22,3.75,0.99
+1941,World War II,Historical,Thriller,8,4.06,0.68
+1941,World War II,Historical,Adventure,7,4.00,0.76
+1941,World War II,Historical,Horror,7,3.64,0.99
+1941,World War II,Historical,Fantasy,6,3.58,1.07
+1941,World War II,Historical,Crime,4,4.00,0.58
+1941,World War II,Historical,War,3,3.83,0.76
+1942,World War II,Historical,Drama,161,3.94,1.01
+1942,World War II,Historical,Romance,115,4.17,0.90
+1942,World War II,Historical,Animation,38,3.37,0.96
+1942,World War II,Historical,Children,38,3.37,0.96
+1942,World War II,Historical,Comedy,23,3.70,1.12
+1942,World War II,Historical,Musical,10,3.70,1.06
+1942,World War II,Historical,War,8,3.19,1.41
+1942,World War II,Historical,Thriller,7,3.79,0.70
+1942,World War II,Historical,Mystery,5,3.70,0.84
+1942,World War II,Historical,Action,2,3.00,1.41
+1942,World War II,Historical,Crime,2,3.25,0.35
+1942,World War II,Historical,Film-Noir,1,3.50,
+1942,World War II,Historical,Horror,1,4.00,
+1943,World War II,Historical,Drama,18,3.81,0.99
+1943,World War II,Historical,Crime,9,4.17,0.61
+1943,World War II,Historical,Thriller,9,4.17,0.61
+1943,World War II,Historical,Horror,3,1.67,1.61
+1943,World War II,Historical,Adventure,2,3.75,0.35
+1943,World War II,Historical,Romance,2,3.75,0.35
+1943,World War II,Historical,War,2,3.75,0.35
+1943,World War II,Historical,Fantasy,1,3.00,
+1943,World War II,Historical,Western,1,4.50,
+1944,World War II,Historical,Drama,45,4.11,0.77
+1944,World War II,Historical,Thriller,40,3.89,0.90
+1944,World War II,Historical,Mystery,35,3.96,0.88
+1944,World War II,Historical,Comedy,33,3.83,0.88
+1944,World War II,Historical,Crime,23,4.33,0.65
+1944,World War II,Historical,Film-Noir,23,4.33,0.65
+1944,World War II,Historical,War,14,3.93,0.81
+1944,World War II,Historical,Musical,12,3.96,0.72
+1944,World War II,Historical,Romance,8,3.94,0.86
+1944,World War II,Historical,Adventure,5,3.60,0.74
+1944,World War II,Historical,Action,2,3.50,0.71
+1944,World War II,Historical,Children,2,3.75,0.35
+1945,World War II,Historical,Mystery,18,3.58,1.03
+1945,World War II,Historical,Thriller,12,3.92,0.70
+1945,World War II,Historical,Musical,11,3.45,1.11
+1945,World War II,Historical,Drama,10,3.60,1.13
+1945,World War II,Historical,Romance,9,3.83,0.79
+1945,World War II,Historical,Crime,7,3.57,0.67
+1945,World War II,Historical,Animation,6,3.67,1.03
+1945,World War II,Historical,Children,6,3.67,1.03
+1945,World War II,Historical,Comedy,6,3.25,1.13
+1945,World War II,Historical,Horror,6,2.83,1.83
+1945,World War II,Historical,Film-Noir,3,3.67,0.29
+1945,World War II,Historical,War,3,3.67,0.58
+1945,World War II,Historical,Fantasy,2,2.00,2.12
+1977,Star Wars release,Franchise,Adventure,367,3.98,0.97
+1977,Star Wars release,Franchise,Sci-Fi,313,4.12,0.91
+1977,Star Wars release,Franchise,Action,293,4.10,0.94
+1977,Star Wars release,Franchise,Drama,134,3.53,0.94
+1977,Star Wars release,Franchise,Comedy,129,3.55,1.09
+1977,Star Wars release,Franchise,Romance,85,3.76,1.03
+1977,Star Wars release,Franchise,Children,43,2.92,0.93
+1977,Star Wars release,Franchise,Animation,32,3.05,0.98
+1977,Star Wars release,Franchise,Horror,28,3.25,1.29
+1977,Star Wars release,Franchise,Thriller,25,3.32,0.98
+1977,Star Wars release,Franchise,Fantasy,20,2.68,0.96
+1977,Star Wars release,Franchise,Musical,18,2.86,0.74
+1977,Star Wars release,Franchise,Crime,16,3.28,1.11
+1977,Star Wars release,Franchise,War,16,3.63,0.65
+1977,Star Wars release,Franchise,Documentary,6,3.83,0.41
+1977,Star Wars release,Franchise,Mystery,3,3.83,1.04
+1977,Star Wars release,Franchise,Western,1,3.00,
+1993,Jurassic Park release,Franchise,Drama,1577,3.56,1.01
+1993,Jurassic Park release,Franchise,Comedy,1519,3.26,1.07
+1993,Jurassic Park release,Franchise,Thriller,985,3.52,0.95
+1993,Jurassic Park release,Franchise,Action,949,3.34,1.03
+1993,Jurassic Park release,Franchise,Romance,711,3.51,0.95
+1993,Jurassic Park release,Franchise,Adventure,701,3.27,1.04
+1993,Jurassic Park release,Franchise,Fantasy,507,3.43,1.06
+1993,Jurassic Park release,Franchise,Sci-Fi,447,3.25,1.10
+1993,Jurassic Park release,Franchise,Children,426,3.15,1.15
+1993,Jurassic Park release,Franchise,War,296,3.92,1.12
+1993,Jurassic Park release,Franchise,Crime,258,3.54,1.03
+1993,Jurassic Park release,Franchise,Animation,169,3.76,1.01
+1993,Jurassic Park release,Franchise,Musical,118,3.54,0.93
+1993,Jurassic Park release,Franchise,Horror,103,3.26,1.21
+1993,Jurassic Park release,Franchise,Western,71,3.75,1.01
+1993,Jurassic Park release,Franchise,Mystery,69,3.05,0.95
+1993,Jurassic Park release,Franchise,Documentary,10,3.60,0.70
+1993,Jurassic Park release,Franchise,Film-Noir,1,3.00,
+2001,The Lord of the Rings trilogy,Franchise,Comedy,1647,3.34,1.09
+2001,The Lord of the Rings trilogy,Franchise,Drama,1552,3.56,0.99
+2001,The Lord of the Rings trilogy,Franchise,Romance,1124,3.49,1.07
+2001,The Lord of the Rings trilogy,Franchise,Adventure,1080,3.62,1.05
+2001,The Lord of the Rings trilogy,Franchise,Thriller,883,3.48,1.01
+2001,The Lord of the Rings trilogy,Franchise,Fantasy,873,3.80,0.96
+2001,The Lord of the Rings trilogy,Franchise,Action,700,3.20,1.01
+2001,The Lord of the Rings trilogy,Franchise,Crime,556,3.54,0.93
+2001,The Lord of the Rings trilogy,Franchise,Animation,526,3.80,0.92
+2001,The Lord of the Rings trilogy,Franchise,Children,510,3.67,0.94
+2001,The Lord of the Rings trilogy,Franchise,Sci-Fi,447,3.41,1.03
+2001,The Lord of the Rings trilogy,Franchise,Mystery,442,3.62,1.01
+2001,The Lord of the Rings trilogy,Franchise,War,196,3.52,0.98
+2001,The Lord of the Rings trilogy,Franchise,Horror,182,3.23,1.13
+2001,The Lord of the Rings trilogy,Franchise,Musical,67,3.49,1.26
+2001,The Lord of the Rings trilogy,Franchise,Film-Noir,51,3.84,0.91
+2001,The Lord of the Rings trilogy,Franchise,Documentary,34,3.78,0.69
+2001,The Lord of the Rings trilogy,Franchise,Western,6,2.17,1.29
+2002,The Lord of the Rings trilogy,Franchise,Drama,1442,3.60,0.91
+2002,The Lord of the Rings trilogy,Franchise,Thriller,1159,3.41,0.99
+2002,The Lord of the Rings trilogy,Franchise,Action,1153,3.41,1.02
+2002,The Lord of the Rings trilogy,Franchise,Comedy,1097,3.18,1.07
+2002,The Lord of the Rings trilogy,Franchise,Adventure,959,3.55,1.04
+2002,The Lord of the Rings trilogy,Franchise,Crime,785,3.57,0.92
+2002,The Lord of the Rings trilogy,Franchise,Sci-Fi,737,3.35,1.03
+2002,The Lord of the Rings trilogy,Franchise,Romance,567,3.42,1.04
+2002,The Lord of the Rings trilogy,Franchise,Mystery,414,3.50,0.98
+2002,The Lord of the Rings trilogy,Franchise,Fantasy,410,3.55,1.10
+2002,The Lord of the Rings trilogy,Franchise,Horror,335,3.17,1.05
+2002,The Lord of the Rings trilogy,Franchise,Children,189,3.37,1.08
+2002,The Lord of the Rings trilogy,Franchise,Animation,146,3.57,0.93
+2002,The Lord of the Rings trilogy,Franchise,Documentary,141,3.72,0.81
+2002,The Lord of the Rings trilogy,Franchise,IMAX,100,3.19,1.12
+2002,The Lord of the Rings trilogy,Franchise,War,86,3.73,0.99
+2002,The Lord of the Rings trilogy,Franchise,Musical,84,3.33,1.14
+2002,The Lord of the Rings trilogy,Franchise,Western,3,3.17,0.76
+2003,The Lord of the Rings trilogy,Franchise,Comedy,1366,3.39,1.02
+2003,The Lord of the Rings trilogy,Franchise,Action,1362,3.44,1.05
+2003,The Lord of the Rings trilogy,Franchise,Drama,1220,3.70,0.89
+2003,The Lord of the Rings trilogy,Franchise,Adventure,1076,3.58,1.00
+2003,The Lord of the Rings trilogy,Franchise,Thriller,825,3.38,1.05
+2003,The Lord of the Rings trilogy,Franchise,Fantasy,663,3.67,0.95
+2003,The Lord of the Rings trilogy,Franchise,Crime,588,3.46,0.99
+2003,The Lord of the Rings trilogy,Franchise,Romance,529,3.48,0.99
+2003,The Lord of the Rings trilogy,Franchise,Sci-Fi,458,3.21,1.08
+2003,The Lord of the Rings trilogy,Franchise,Children,301,3.51,0.98
+2003,The Lord of the Rings trilogy,Franchise,Mystery,221,3.71,0.88
+2003,The Lord of the Rings trilogy,Franchise,Animation,212,3.84,0.82
+2003,The Lord of the Rings trilogy,Franchise,IMAX,176,3.26,1.07
+2003,The Lord of the Rings trilogy,Franchise,Horror,170,2.92,1.14
+2003,The Lord of the Rings trilogy,Franchise,War,149,3.80,0.83
+2003,The Lord of the Rings trilogy,Franchise,Musical,88,3.34,0.93
+2003,The Lord of the Rings trilogy,Franchise,Documentary,65,3.95,0.63
+2003,The Lord of the Rings trilogy,Franchise,Western,12,3.88,0.43
+2007,Netflix begins streaming,Streaming,Drama,1082,3.69,0.91
+2007,Netflix begins streaming,Streaming,Thriller,811,3.46,0.98
+2007,Netflix begins streaming,Streaming,Action,806,3.48,1.00
+2007,Netflix begins streaming,Streaming,Comedy,767,3.45,1.00
+2007,Netflix begins streaming,Streaming,Crime,576,3.67,0.99
+2007,Netflix begins streaming,Streaming,Adventure,489,3.33,0.99
+2007,Netflix begins streaming,Streaming,Fantasy,361,3.41,1.02
+2007,Netflix begins streaming,Streaming,Sci-Fi,355,3.37,1.00
+2007,Netflix begins streaming,Streaming,Romance,329,3.50,0.92
+2007,Netflix begins streaming,Streaming,Horror,328,3.37,1.01
+2007,Netflix begins streaming,Streaming,IMAX,291,3.50,0.96
+2007,Netflix begins streaming,Streaming,Animation,234,3.60,0.81
+2007,Netflix begins streaming,Streaming,Children,172,3.48,0.95
+2007,Netflix begins streaming,Streaming,Mystery,133,3.67,0.97
+2007,Netflix begins streaming,Streaming,War,117,3.63,0.95
+2007,Netflix begins streaming,Streaming,Musical,89,3.62,0.74
+2007,Netflix begins streaming,Streaming,Western,63,4.10,0.79
+2007,Netflix begins streaming,Streaming,Documentary,53,3.83,0.64
+2008,Iron Man / MCU launch,Franchise,Drama,957,3.68,0.95
+2008,Iron Man / MCU launch,Franchise,Action,907,3.55,0.96
+2008,Iron Man / MCU launch,Franchise,Comedy,848,3.37,1.02
+2008,Iron Man / MCU launch,Franchise,Adventure,584,3.48,0.97
+2008,Iron Man / MCU launch,Franchise,Crime,566,3.80,0.91
+2008,Iron Man / MCU launch,Franchise,Romance,515,3.53,1.06
+2008,Iron Man / MCU launch,Franchise,Sci-Fi,445,3.53,0.99
+2008,Iron Man / MCU launch,Franchise,Thriller,443,3.36,0.97
+2008,Iron Man / MCU launch,Franchise,Animation,267,3.71,0.92
+2008,Iron Man / MCU launch,Franchise,Children,266,3.67,0.95
+2008,Iron Man / MCU launch,Franchise,IMAX,240,3.91,0.88
+2008,Iron Man / MCU launch,Franchise,Fantasy,207,3.36,0.99
+2008,Iron Man / MCU launch,Franchise,War,130,3.68,0.91
+2008,Iron Man / MCU launch,Franchise,Mystery,98,3.32,0.93
+2008,Iron Man / MCU launch,Franchise,Horror,52,3.21,1.23
+2008,Iron Man / MCU launch,Franchise,Documentary,50,3.65,0.92
+2008,Iron Man / MCU launch,Franchise,Musical,47,3.48,1.07
+2008,Iron Man / MCU launch,Franchise,Western,15,3.40,0.81
+2010,Instagram launch,Digital,Drama,704,3.70,0.99
+2010,Instagram launch,Digital,Action,691,3.51,1.00
+2010,Instagram launch,Digital,Comedy,632,3.47,1.03
+2010,Instagram launch,Digital,Thriller,558,3.62,1.01
+2010,Instagram launch,Digital,IMAX,480,3.78,0.99
+2010,Instagram launch,Digital,Adventure,404,3.50,1.02
+2010,Instagram launch,Digital,Fantasy,356,3.53,1.10
+2010,Instagram launch,Digital,Sci-Fi,291,3.74,0.97
+2010,Instagram launch,Digital,Crime,261,3.89,0.97
+2010,Instagram launch,Digital,Mystery,250,4.02,0.93
+2010,Instagram launch,Digital,Children,239,3.78,0.97
+2010,Instagram launch,Digital,Romance,235,3.30,1.05
+2010,Instagram launch,Digital,Animation,227,3.86,0.89
+2010,Instagram launch,Digital,Horror,80,3.38,1.07
+2010,Instagram launch,Digital,Musical,72,3.76,0.99
+2010,Instagram launch,Digital,Documentary,55,3.95,0.81
+2010,Instagram launch,Digital,Western,36,3.51,1.05
+2010,Instagram launch,Digital,War,27,3.65,0.78
+2010,Instagram launch,Digital,Film-Noir,2,3.75,0.35
+2015,Major streaming expansion,Streaming,Adventure,484,3.59,1.03
+2015,Major streaming expansion,Streaming,Drama,415,3.48,1.08
+2015,Major streaming expansion,Streaming,Action,413,3.35,1.13
+2015,Major streaming expansion,Streaming,Comedy,380,3.43,1.09
+2015,Major streaming expansion,Streaming,Sci-Fi,354,3.53,1.06
+2015,Major streaming expansion,Streaming,Thriller,256,3.25,1.22
+2015,Major streaming expansion,Streaming,Crime,147,3.29,1.19
+2015,Major streaming expansion,Streaming,Fantasy,131,3.56,1.04
+2015,Major streaming expansion,Streaming,Children,95,3.32,1.22
+2015,Major streaming expansion,Streaming,Animation,92,3.49,1.10
+2015,Major streaming expansion,Streaming,Romance,57,3.21,1.32
+2015,Major streaming expansion,Streaming,Horror,45,3.02,1.42
+2015,Major streaming expansion,Streaming,IMAX,41,3.85,0.87
+2015,Major streaming expansion,Streaming,Mystery,36,2.94,1.18
+2015,Major streaming expansion,Streaming,Western,24,3.81,0.72
+2015,Major streaming expansion,Streaming,Documentary,23,3.87,0.71
+2015,Major streaming expansion,Streaming,War,3,3.67,1.15
+2015,Major streaming expansion,Streaming,Musical,1,3.00,

@@ -1,0 +1,129 @@
+historical_era,genre,rating_count,average_rating,era_order
+Early Cinema,Drama,59,3.71,1
+Early Cinema,Comedy,45,3.77,1
+Early Cinema,Sci-Fi,30,3.82,1
+Early Cinema,Horror,26,3.60,1
+Early Cinema,Fantasy,22,3.82,1
+Early Cinema,War,20,3.73,1
+Early Cinema,Adventure,18,3.81,1
+Early Cinema,Romance,18,3.89,1
+Early Cinema,Crime,12,3.54,1
+Early Cinema,Action,11,3.73,1
+Early Cinema,Musical,6,2.92,1
+Early Cinema,Animation,4,2.75,1
+Early Cinema,Thriller,4,3.75,1
+Early Cinema,Children,3,2.33,1
+Early Cinema,Documentary,3,3.33,1
+Early Cinema,Western,2,2.50,1
+Early Cinema,Mystery,1,3.00,1
+Depression & WWII,Drama,799,3.83,2
+Depression & WWII,Romance,445,3.95,2
+Depression & WWII,Musical,420,3.70,2
+Depression & WWII,Children,380,3.62,2
+Depression & WWII,Comedy,356,3.86,2
+Depression & WWII,Fantasy,325,3.68,2
+Depression & WWII,Animation,275,3.55,2
+Depression & WWII,Mystery,235,3.96,2
+Depression & WWII,Adventure,164,3.77,2
+Depression & WWII,Thriller,139,3.88,2
+Depression & WWII,War,137,3.78,2
+Depression & WWII,Film-Noir,106,4.06,2
+Depression & WWII,Crime,95,3.81,2
+Depression & WWII,Horror,83,3.39,2
+Depression & WWII,Action,60,3.71,2
+Depression & WWII,Sci-Fi,19,3.39,2
+Depression & WWII,Western,10,3.55,2
+Depression & WWII,Documentary,4,4.00,2
+Postwar Cinema,Drama,1102,3.93,3
+Postwar Cinema,Romance,682,3.90,3
+Postwar Cinema,Comedy,482,3.76,3
+Postwar Cinema,Thriller,479,4.04,3
+Postwar Cinema,Adventure,373,3.82,3
+Postwar Cinema,Mystery,371,4.06,3
+Postwar Cinema,Musical,312,3.64,3
+Postwar Cinema,Children,301,3.53,3
+Postwar Cinema,Crime,290,4.00,3
+Postwar Cinema,Fantasy,228,3.66,3
+Postwar Cinema,Animation,212,3.43,3
+Postwar Cinema,Film-Noir,207,4.05,3
+Postwar Cinema,Action,203,3.94,3
+Postwar Cinema,War,181,3.95,3
+Postwar Cinema,Sci-Fi,149,3.32,3
+Postwar Cinema,Horror,87,3.13,3
+Postwar Cinema,Western,80,3.79,3
+Postwar Cinema,Documentary,2,4.25,3
+New Hollywood,Drama,3439,3.92,4
+New Hollywood,Comedy,2395,3.72,4
+New Hollywood,Adventure,1853,3.74,4
+New Hollywood,Action,1838,3.80,4
+New Hollywood,Sci-Fi,1408,3.65,4
+New Hollywood,Thriller,1384,3.72,4
+New Hollywood,Crime,1314,3.99,4
+New Hollywood,Horror,902,3.60,4
+New Hollywood,Musical,840,3.61,4
+New Hollywood,Romance,800,3.76,4
+New Hollywood,Children,760,3.51,4
+New Hollywood,War,691,4.01,4
+New Hollywood,Fantasy,653,3.76,4
+New Hollywood,Western,480,3.91,4
+New Hollywood,Mystery,383,3.71,4
+New Hollywood,Animation,372,3.57,4
+New Hollywood,Film-Noir,64,4.23,4
+New Hollywood,Documentary,28,3.79,4
+Blockbuster Era,Comedy,21366,3.35,5
+Blockbuster Era,Drama,20071,3.63,5
+Blockbuster Era,Action,15130,3.41,5
+Blockbuster Era,Thriller,13508,3.47,5
+Blockbuster Era,Adventure,11027,3.45,5
+Blockbuster Era,Romance,9613,3.47,5
+Blockbuster Era,Sci-Fi,8334,3.42,5
+Blockbuster Era,Crime,8304,3.64,5
+Blockbuster Era,Fantasy,5214,3.41,5
+Blockbuster Era,Children,4454,3.31,5
+Blockbuster Era,Horror,3517,3.23,5
+Blockbuster Era,Mystery,3319,3.56,5
+Blockbuster Era,Animation,2613,3.64,5
+Blockbuster Era,War,2318,3.84,5
+Blockbuster Era,Musical,1695,3.53,5
+Blockbuster Era,Western,1001,3.41,5
+Blockbuster Era,IMAX,545,3.86,5
+Blockbuster Era,Documentary,324,3.88,5
+Blockbuster Era,Film-Noir,299,3.79,5
+Early Digital,Drama,10082,3.60,6
+Early Digital,Comedy,8921,3.30,6
+Early Digital,Action,7057,3.40,6
+Early Digital,Thriller,6757,3.45,6
+Early Digital,Adventure,6226,3.52,6
+Early Digital,Romance,4537,3.47,6
+Early Digital,Crime,3957,3.56,6
+Early Digital,Sci-Fi,3474,3.38,6
+Early Digital,Fantasy,3331,3.56,6
+Early Digital,Mystery,2108,3.57,6
+Early Digital,Children,1952,3.44,6
+Early Digital,Animation,1797,3.63,6
+Early Digital,Horror,1685,3.09,6
+Early Digital,War,899,3.61,6
+Early Digital,IMAX,894,3.52,6
+Early Digital,Documentary,544,3.71,6
+Early Digital,Musical,543,3.46,6
+Early Digital,Film-Noir,149,3.85,6
+Early Digital,Western,91,3.16,6
+Streaming Era,Drama,6371,3.62,7
+Streaming Era,Action,6324,3.49,7
+Streaming Era,Comedy,5484,3.42,7
+Streaming Era,Adventure,4496,3.51,7
+Streaming Era,Thriller,4175,3.47,7
+Streaming Era,Sci-Fi,3819,3.53,7
+Streaming Era,Crime,2707,3.64,7
+Streaming Era,IMAX,2706,3.60,7
+Streaming Era,Fantasy,2058,3.45,7
+Streaming Era,Romance,2029,3.45,7
+Streaming Era,Animation,1709,3.66,7
+Streaming Era,Children,1357,3.58,7
+Streaming Era,Mystery,1257,3.69,7
+Streaming Era,Horror,987,3.32,7
+Streaming Era,War,612,3.69,7
+Streaming Era,Musical,322,3.54,7
+Streaming Era,Documentary,314,3.86,7
+Streaming Era,Western,266,3.73,7
+Streaming Era,Film-Noir,45,3.68,7

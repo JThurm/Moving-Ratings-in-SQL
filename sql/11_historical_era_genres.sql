@@ -3,7 +3,7 @@
 
 WITH era_data AS(
     SELECT
-        m.release_year,
+        m.release_year,z
         CASE 
             WHEN m.release_year BETWEEN 1900 AND 1929 THEN 'Early Cinema'
             WHEN m.release_year BETWEEN 1930 AND 1945 THEN 'The Great Depression and WWII'

@@ -1,187 +1,436 @@
-# Movie Ratings & Genre Trends: A SQL Exploration
+# MovieLens Analytics — SQL & Data Analysis
 
-A SQL-based analysis of a MovieLens-style movie ratings dataset exploring how audience ratings and genre popularity change over time. The project uses relational modeling, aggregations, joins, and window functions to investigate rating trends, genre popularity, audience disagreement, and rating activity.
+A PostgreSQL and Python data-analysis project exploring how movie ratings, genre popularity, audience disagreement, and rating activity change across more than a century of film releases.
+
+The project uses **PostgreSQL, SQL, Pandas, Plotly, and Streamlit** to transform the MovieLens dataset into a collection of reproducible analyses and an interactive dashboard.
+
+---
 
 ## Overview
 
-This project uses PostgreSQL and SQL analytics to answer several questions about movie ratings and audience behavior:
+This project investigates how audience rating behavior changes across time.
 
-* Do average movie ratings trend upward, downward, or remain relatively stable over time?
-* Which genres appear most consistently across different periods?
-* Which genres grow or decline in popularity based on rating volume?
-* Which genre is the highest-rated in a given year, and does that leader change over time?
-* Which movies are the most polarizing among viewers?
-* Are there noticeable patterns in when users submit ratings?
+Rather than focusing only on average movie ratings, the analysis considers several dimensions of movie reception:
 
-## Dataset
+* Rating volume
+* Average rating
+* Rating variability
+* Genre popularity
+* Genre polarization
+* Historical-era trends
+* Seasonal rating activity
+* Historical and industry events
 
-* **Source:** [MovieLens dataset](https://grouplens.org/datasets/movielens/)
-* **Schema:**
-
-  * `movies(movie_id, title, release_year, genres)`
-  * `ratings(rating_id, user_id, movie_id, rating, rating_timestamp)`
-* The original `genres` column stores multiple genres as a pipe-delimited string, such as `Action|Comedy`.
-* Genres were normalized into a separate `movie_genres(movie_id, genre)` bridge table, allowing individual genres to be queried and aggregated independently.
-
-## Tech Stack
-
-* PostgreSQL
-* SQL
-* Relational database design
-* Aggregate functions
-* JOINs
-* Window functions
-
-## SQL Queries
-
-| File                              | Description                                                           |
-| --------------------------------- | --------------------------------------------------------------------- |
-| `01_schema_setup.sql`             | Creates the database tables and initial schema                        |
-| `02_load_data.sql`                | Loads movie and rating CSV data                                       |
-| `03_normalizing_genres.sql`       | Normalizes pipe-delimited genres into the `movie_genres` bridge table |
-| `04_add_release_year.sql`         | Converts the extracted release year into an integer                   |
-| `05_rating_trends_by_year.sql`    | Analyzes average rating and rating volume by release year             |
-| `06_genre_popularity_by_year.sql` | Analyzes rating volume and average rating by genre and year           |
-| `07_genre_yoy_change.sql`         | Calculates changes in genre ratings using `LAG()`                     |
-| `08_top_genre_per_year.sql`       | Identifies the highest-rated genre each year using `RANK()`           |
-| `09_polarizing_movies.sql`        | Identifies movies with high rating disagreement using `STDDEV()`      |
-| `10_seasonal_patterns.sql`        | Examines rating activity and averages by month                        |
-
-# Findings
-
-## 1. Rating Trends by Year
-
-**Query:** `sql/05_rating_trends_by_year.sql`
-
-Average ratings fluctuate considerably across release years, but there is no strong overall upward or downward trend. Ratings are relatively variable during the earliest years, become more stable through the middle decades, and generally decline from the late 1970s into the 1990s. From the 2000s through the 2010s, average ratings remain relatively stable around 3.4–3.6.
-
-Individual years can show substantial differences, but these differences should not automatically be interpreted as changes in overall movie quality.
-
-### Caveat: Sample Size
-
-The number of ratings behind each yearly average varies significantly. Early years often contain very few ratings; for example, 1917 has only one rating. With such a small sample, a single user's opinion can have a large effect on the average.
-
-The same issue appears in some of the most recent years. In contrast, years such as 1994 contain thousands of ratings, providing substantially stronger evidence of the average rating for that year.
+The analysis covers **100,818 ratings across 106 release years from 1902–2018**.
 
 ---
 
-## 2. Genre Popularity by Year
+## Key Questions
 
-**Query:** `sql/06_genre_popularity_by_year.sql`
+The project asks:
 
-From 1900–1950, **Drama and Comedy** are among the most consistently represented genres, appearing across 31 and 33 different years respectively. Romance is also consistently represented, while genres such as Documentary, Sci-Fi, Western, and Animation appear less frequently.
-
-In terms of rating volume, **Drama shows one of the clearest increases**, growing from 56 ratings in the 1920s to 355 in the 1930s and 669 in the 1940s. Romance, Musical, Children, and Film-Noir also become substantially more prominent during the 1930s and 1940s.
-
-### Historical Context
-
-These changes can be considered alongside major historical events of the period. The **Great Depression began in 1929**, creating widespread economic hardship throughout the 1930s. During this period, movies offered audiences an accessible form of entertainment and an opportunity for escapism. Comedy, Romance, Musical, Fantasy, and Adventure films could provide audiences with humor, excitement, and imaginative stories that contrasted with the difficulties of everyday life.
-
-The transition from silent films to sound also changed the types of movies that could be produced and helped make dialogue-heavy films and musicals increasingly practical.
-
-World War II (1939–1945) provides another important historical context. War-related films became more prominent, while darker genres such as Film-Noir also increased from 25 ratings in the 1930s to 181 in the 1940s.
-
-These historical events should be treated as **possible explanations rather than direct causes**. The dataset measures movie genres and user ratings, but it does not contain information about economic conditions, audience motivations, or individual movie-going behavior.
-
-### Caveat: Rating Volume vs. Movie Popularity
-
-`rating_count` measures the number of user ratings, not the number of movies produced or the number of people who watched a movie.
-
-Therefore, an increase in rating volume could reflect greater audience interest, more movies being represented, or differences in how frequently users submitted ratings.
+* Do average movie ratings trend upward or downward over time?
+* Which genres receive the most rating activity?
+* Are the most popular genres also the highest-rated?
+* How does genre activity change across historical eras?
+* Which genres produce the most disagreement?
+* Which movies are the most polarizing?
+* Does rating volume relate to average rating or variability?
+* Does audience disagreement change over time?
+* Are there meaningful seasonal patterns in rating activity?
+* How do major historical and industry events align with genre trends?
 
 ---
 
-## 3. Year-over-Year Genre Change
+## Key Findings
 
-**Query:** `sql/07_genre_yoy_change.sql`
+### Popularity ≠ Rating Quality
 
-Musicals show some of the most volatile changes in average rating between 1900 and 1950, including a 3.13-point decrease in 1931 followed by a 2.79-point increase in 1933. Other large changes occur in Comedy, Adventure, Horror, Drama, and Fantasy.
+Drama has the largest rating volume at approximately **41,926 ratings**, while Film-Noir has the highest average rating among qualifying genres at approximately **3.92**.
 
-However, these results require caution. Some genres have gaps between observations, meaning a comparison labeled as year-over-year may actually span multiple calendar years. Small sample sizes can also cause large changes in average ratings.
+This demonstrates that the most frequently rated genres are not necessarily the highest-rated.
 
----
+### Genre Preferences Change
 
-## 4. Top Genre per Year
+Genre activity shifts considerably across historical periods. Drama remains consistently important, while Action, Adventure, Sci-Fi, Horror, and Fantasy become more prominent in later periods.
 
-**Query:** `sql/08_top_genre_per_year.sql`
+### Some Genres Are More Polarizing
 
-The highest-rated genre changes considerably over time rather than remaining dominated by a single genre.
+Horror has the highest rating standard deviation among genres with at least 100 ratings, at approximately **1.14**.
 
-During the late 1930s, Musical and Fantasy appear among the highest-rated genres in the available years. Romance becomes particularly prominent during the early and mid-1940s, ranking first in 1940, 1942, and 1946. Film-Noir ranks first in 1941, while Drama becomes the top genre in 1948 and 1950.
+Higher variability indicates greater disagreement rather than lower quality.
 
-The prominence of Romance and Film-Noir during the 1940s is particularly interesting when considered alongside the social and cultural effects of World War II. However, the dataset cannot establish that the war directly caused these genre preferences.
+### Popularity Has Little Relationship with Polarization
 
-More broadly, earlier decades are dominated by established genres such as Drama, Comedy, and Romance, while later decades contain greater representation from Action, Adventure, Sci-Fi, Horror, and Fantasy.
+At the movie level, the correlation between rating volume and rating variability is approximately:
 
----
+```text
+-0.058
+```
 
-## 5. Most Polarizing Movies
+This is an extremely weak relationship, suggesting that highly rated movies are not automatically more or less polarizing because they receive more ratings.
 
-**Query:** `sql/09_polarizing_movies.sql`
+### Average Rating and Variability
 
-The most polarizing movies in the dataset tend to be recognizable mainstream films, particularly comedies, science-fiction films, action movies, and major blockbusters from the 1980s through the 2000s.
+The correlation between average rating and rating variability is approximately:
 
-High polarization does not necessarily mean that a movie is poorly rated. Films such as **The Big Lebowski** and **2001: A Space Odyssey** have relatively high average ratings while still showing substantial disagreement among viewers.
+```text
+-0.423
+```
 
-This suggests that polarization may be associated with strong audience reactions rather than simply low movie quality. Distinctive humor, unconventional storytelling, unusual visual styles, and strong fan bases can all contribute to viewers having very different opinions.
+This indicates a moderate negative relationship: movies with higher average ratings tend to show somewhat lower rating variability.
 
----
+### Seasonal Activity Is Uneven
 
-## 6. Seasonal and Time Patterns
-
-**Query:** `sql/10_seasonal_patterns.sql`
-
-Rating activity varies substantially across months and years, with several notable spikes, including:
+The dataset contains several large rating spikes, including:
 
 * May 2017 — 2,397 ratings
 * August 2000 — 2,319 ratings
 * November 2015 — 1,839 ratings
 * April 2016 — 1,755 ratings
 
-However, these high-volume months are not consistent enough across different years to establish a strong seasonal pattern.
-
-For example, August contains 2,319 ratings in 2000 but only 108 in 2003. This suggests that some of the variation may be related to dataset collection patterns, user activity, or incomplete data rather than a recurring seasonal effect.
-
-Factors such as holidays, school breaks, and movie releases could contribute to some fluctuations, but the dataset does not provide enough information to establish these as definitive causes.
+However, the spikes are not consistent enough across years to establish a strong recurring seasonal pattern.
 
 ---
 
-# Data Quality & Limitations
+# Interactive Dashboard
 
-Several limitations should be considered when interpreting the results:
+The project includes a Streamlit dashboard designed to present the analysis in two levels:
 
-* The dataset is unevenly distributed across time, with significantly more ratings available in later decades.
-* Early years often contain very small samples, making their averages less reliable.
-* Some years and genres have missing observations, which can make apparent year-over-year changes larger than they actually are.
-* `rating_count` represents user ratings, not the number of movies produced or total movie viewers.
-* The `(no genres listed)` category represents missing genre information rather than an actual genre.
-* Historical events provide useful context for interpreting trends, but the dataset cannot establish causal relationships between those events and audience behavior.
+```text
+Overview
+   ↓
+Findings
+   ↓
+Explore Data
+   ↓
+Methodology
+```
+
+### Overview
+
+Provides a high-level introduction to the dataset and broad rating trends.
+
+### Findings
+
+Presents the major conclusions from the SQL analysis in a guided format.
+
+### Explore Data
+
+Provides interactive visualizations for:
+
+* Rating trends
+* Genre popularity
+* Genre changes
+* Historical eras
+* Audience polarization
+* Rating variability
+* Seasonal patterns
+* Historical events
+
+### Methodology
+
+Documents:
+
+* Database structure
+* Analytical methods
+* SQL queries
+* Statistical measures
+* Data limitations
+* Reproducibility
 
 ---
 
-# What I Would Explore Next
+# Project Structure
 
-Several extensions could build on this analysis:
-
-1. Compare genre trends across major historical eras, from early cinema through the 2000s.
-2. Compare genre popularity with average rating to determine whether the most frequently rated genres were also the highest-rated.
-3. Analyze whether rating disagreement changes over time.
-4. Determine whether certain genres consistently produce more polarized audiences.
-5. Investigate the relationship between rating volume, average rating, and rating variability.
-6. Correlate genre trends with external events such as major franchise releases and the rise of streaming platforms.
-7. Build a lightweight dashboard using Python or Tableau to visualize the results.
+```text
+Moving-Ratings-in-SQL/
+│
+├── data/
+│   └── ml-latest-small/
+│       ├── movies.csv
+│       ├── ratings.csv
+│       ├── tags.csv
+│       └── links.csv
+│
+├── sql/
+│   ├── 01_schema_setup.sql
+│   ├── 02_load_data.sql
+│   ├── 03_normalizing_genres.sql
+│   ├── 04_add_release_year.sql
+│   ├── 05_rating_trends_by_year.sql
+│   ├── 06_genre_popularity_by_year.sql
+│   ├── 07_genre_yoy_change.sql
+│   ├── 08_top_genre_per_year.sql
+│   ├── 09_polarizing_movies.sql
+│   ├── 10_seasonal_patterns.sql
+│   ├── 11_historical_era_genres.sql
+│   ├── 12_genre_popularity_vs_rating.sql
+│   ├── 13_rating_disagreement_over_time.sql
+│   ├── 14_genre_polarization.sql
+│   ├── 15_rating_volume_vs_variability.sql
+│   └── 16_historical_events.sql
+│
+├── results/
+│   ├── 01_rating_trends_by_year.csv
+│   ├── 02_genre_popularity_by_year.csv
+│   ├── 03_genre_yoy_change.csv
+│   ├── 04_top_genre_per_year.csv
+│   ├── 05_polarizing_movies.csv
+│   ├── 06_seasonal_patterns.csv
+│   ├── 07_historical_era_genres.csv
+│   ├── 08_genre_popularity_vs_rating.csv
+│   ├── 09_rating_disagreement_over_time.csv
+│   ├── 10_genre_polarization.csv
+│   ├── 11_rating_volume_vs_variability.csv
+│   └── 12_historical_events.csv
+│
+├── dashboard/
+│   └── app.py
+│
+├── findings.md
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-# How to Run
+# Database Design
 
-1. Load the MovieLens dataset into PostgreSQL.
-2. Run `01_schema_setup.sql` to create the database schema.
-3. Run `02_load_data.sql` to load the movie and rating data.
-4. Run `03_normalizing_genres.sql` to create and populate the normalized genre table.
-5. Run `04_add_release_year.sql` to prepare the release-year data.
-6. Run the numbered analysis queries individually or in sequence.
+The original MovieLens dataset stores genres as a pipe-delimited string:
+
+```text
+Action|Comedy|Sci-Fi
+```
+
+The project normalizes this structure into a bridge table:
+
+```text
+movie_genres
+----------------
+movie_id
+genre
+```
+
+This allows individual genres to be analyzed independently.
+
+The core relational structure is:
+
+```text
+movies
+ ├── movie_id
+ ├── title
+ ├── release_year
+ └── genres
+
+ratings
+ ├── rating_id
+ ├── user_id
+ ├── movie_id
+ ├── rating
+ └── rating_timestamp
+
+movie_genres
+ ├── movie_id
+ └── genre
+```
 
 ---
 
-*Built as a portfolio project to demonstrate SQL fluency through relational modeling, JOINs, aggregations, data normalization, and window functions including `LAG()`, `RANK()`, and `STDDEV()`.*
+# SQL Analysis
+
+The project contains 12 analytical queries.
+
+| Query                                  | Purpose                                          |
+| -------------------------------------- | ------------------------------------------------ |
+| `05_rating_trends_by_year.sql`         | Average rating and rating volume by release year |
+| `06_genre_popularity_by_year.sql`      | Genre rating activity by year                    |
+| `07_genre_yoy_change.sql`              | Genre rating changes using `LAG()`               |
+| `08_top_genre_per_year.sql`            | Highest-rated genre using `RANK()`               |
+| `09_polarizing_movies.sql`             | Most polarizing movies using `STDDEV()`          |
+| `10_seasonal_patterns.sql`             | Rating activity by month                         |
+| `11_historical_era_genres.sql`         | Genre trends across historical eras              |
+| `12_genre_popularity_vs_rating.sql`    | Popularity vs. average rating                    |
+| `13_rating_disagreement_over_time.sql` | Rating disagreement by year                      |
+| `14_genre_polarization.sql`            | Genre-level rating variability                   |
+| `15_rating_volume_vs_variability.sql`  | Rating volume, quality, and variability          |
+| `16_historical_events.sql`             | Genre activity around historical/industry events |
+
+---
+
+# Technologies
+
+### Database
+
+* PostgreSQL
+* SQL
+* Relational data modeling
+
+### Analysis
+
+* Aggregate functions
+* `JOIN`
+* `GROUP BY`
+* `LAG()`
+* `RANK()`
+* `STDDEV()`
+* `CORR()`
+
+### Visualization
+
+* Python
+* Pandas
+* Plotly
+* Streamlit
+
+---
+
+# Running the Project
+
+## 1. Load the Database
+
+Create the database schema using:
+
+```text
+sql/01_schema_setup.sql
+```
+
+Load the MovieLens data using:
+
+```text
+sql/02_load_data.sql
+```
+
+Normalize the movie genres using:
+
+```text
+sql/03_normalizing_genres.sql
+```
+
+Prepare the release-year field using:
+
+```text
+sql/04_add_release_year.sql
+```
+
+---
+
+## 2. Run the Analysis
+
+Run the analytical SQL files in `sql/`.
+
+The results can be exported into the `results/` directory as CSV files.
+
+The dashboard expects the result files to follow this naming convention:
+
+```text
+01_rating_trends_by_year.csv
+02_genre_popularity_by_year.csv
+03_genre_yoy_change.csv
+...
+12_historical_events.csv
+```
+
+---
+
+# Running the Dashboard
+
+Install the Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then launch Streamlit from the project root:
+
+```bash
+streamlit run dashboard/app.py
+```
+
+The dashboard will load the exported CSV files from:
+
+```text
+results/
+```
+
+---
+
+# Important Limitations
+
+The analysis should be interpreted with several limitations in mind.
+
+### Rating Volume
+
+Rating volume represents submitted ratings, not unique viewers, movie production volume, box-office performance, or streaming views.
+
+### Uneven Samples
+
+The dataset contains substantially more rating activity for recent movies than older films. Early-year averages can therefore be much less reliable.
+
+### Genre Assignment
+
+Movies can belong to multiple genres, so a movie's ratings can contribute to more than one genre.
+
+### Missing Genres
+
+`(no genres listed)` represents missing genre information rather than an actual genre.
+
+### Year-over-Year Analysis
+
+The `LAG()` analysis compares each genre with its previous available observation. Missing years can therefore make some reported changes span multiple calendar years.
+
+### Correlation
+
+Correlation measures statistical association, not causation.
+
+### Historical Events
+
+Historical and industry events are included as contextual markers. The analysis does not establish that these events caused changes in movie ratings or genre popularity.
+
+---
+
+# Documentation
+
+The detailed analytical interpretation is available in:
+
+```text
+findings.md
+```
+
+The findings report provides:
+
+* Executive summary
+* Research questions
+* Methodology
+* Detailed findings
+* Statistical interpretation
+* Historical context
+* Data-quality discussion
+* Limitations
+* Future work
+
+---
+
+# Project Goal
+
+This project was built as a portfolio demonstration of practical SQL and data-analysis skills.
+
+Rather than simply querying a database for individual answers, the project demonstrates an end-to-end workflow:
+
+```text
+Raw Data
+   ↓
+Relational Modeling
+   ↓
+SQL Analysis
+   ↓
+Statistical Interpretation
+   ↓
+CSV Results
+   ↓
+Python Visualization
+   ↓
+Interactive Dashboard
+```
+
+The goal is to demonstrate the ability to take a real-world dataset, structure it for analysis, formulate meaningful questions, perform reproducible SQL analysis, interpret the results critically, and communicate those results through an interactive application.
